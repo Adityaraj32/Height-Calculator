@@ -1,4 +1,5 @@
 from tkinter import *
+import tkinter.messagebox as tmsg
 root = Tk()
 root.title("Height Calculator")
 root.geometry("455x995")
@@ -27,7 +28,7 @@ def GetHie():
             FinHie = presentHieght.get()/99 * 100
         elif presentAge.get() == 18 :
             FinHie = presentHieght.get()/100 * 100
-        print(f"Your Maximum Height will be {FinHie}Cm")
+        tkinter.showinfo("Your Height",f"Your Maximum Height is {FinHie}") 
     elif PGender.get() == "Female" or PGender.get() == "female":
         if presentAge.get() == 8 :
             FinHie = presentHieght.get()/77 * 100
@@ -51,7 +52,7 @@ def GetHie():
             FinHie = presentHieght.get()/100 * 100
         elif presentAge.get() == 18 :
             FinHie = presentHieght/100 * 100
-        print(f"Your Maximum Height will be {FinHie}Cm")
+        tkinter.showinfo("Your Height",f"Your Maximum Height is {FinHie}") 
 
 Label1 = Label(root, text = "Enter Your Gender")
 Label1.grid()
